@@ -28,15 +28,10 @@ pipeline {
                                 echo "Running the unit test..."
                            }
                            }
-                            stage('Integration test') {
-                              agent {
-                                    docker {
-                                            reuseNode true
-                                            image 'ubuntu'
-                                           }
-                                    }
+                            stage('Build Docker Image') {
+                              
                               steps {
-                                echo "Running the integration test..."
+                                sh "sudo docker run hello-world" 
                               }
                            }
                            }
