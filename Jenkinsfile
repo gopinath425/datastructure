@@ -31,7 +31,7 @@ pipeline {
                             stage('Build Docker Image') {
                               
                               steps {
-                                sh "sudo docker run hello-world" 
+                                sh "docker run hello-world" 
                               }
                            }
                            }
