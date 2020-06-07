@@ -16,5 +16,10 @@ pipeline {
                 }
             }
         }
+        stage('Build Docker Image'){
+        	steps{
+        		sh 'docker build . -t datastructureimage/datastructre:v11'
+        	}
+        }
     }
 }
