@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Build Docker Image'){
         	steps{
-        		sh 'docker build -f Dockerfile -t datastructureimage/datastructre:v11'
+        		sh 'docker build . -f Dockerfile -t datastructureimage/datastructre:v11'
         	}
         }
     }
